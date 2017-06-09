@@ -14,10 +14,12 @@
 			
 				$query = "SELECT * FROM posts;";
 				$result = mysqli_query($con, $query);
-				
+	
 				while ($row = mysqli_fetch_array($result))
 				{
-					echo "<p><a href='updates_post.php?id=" . $row['id'] . "'>" . $row['title'] . "</a></p>";
+					$d = strtotime($row["date"]);
+					$date = date("d/m/Y", $d);
+					echo "<p><a href='updates_post.php?id=" . $row["id"] . "'>" . $row["title"] . "</a> - " . $date . "</p>";
 				}
 			?>
 			</ul>
