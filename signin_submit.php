@@ -14,7 +14,7 @@
 		session_start();
 		
 		$_SESSION["user"] = $user;
-		$_SESSION["pass"] = $pass;
+		$_SESSION["pass"] = $plain_pass;
 		
 		header("location:/control_panel/controlpanel"); // Re-direct to control panel
 	}
