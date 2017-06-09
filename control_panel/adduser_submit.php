@@ -8,8 +8,8 @@
 			include("navbar.php");
 			include("database_conn.php");
 			
-			$user = $_POST["user"];
-			$pass = $_POST["pass"];
+			$user = $_POST["user"];			
+			$pass = hash("md5", $_POST["pass"]);
 			
 			try
 			{
