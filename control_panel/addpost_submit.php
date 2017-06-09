@@ -10,10 +10,11 @@
 			
 			$title = $_POST["title"];
 			$content = $_POST["content"];
+			$date = date("Y-m-d");
 			
 			try
 			{
-				$query = "INSERT INTO posts VALUES(null, '$title', '$content');";
+				$query = "INSERT INTO posts VALUES(null, '$title', '$content', '$date');";
 				mysqli_query($con, $query);
 				
 				echo "<p>Posted successfully. <a href='controlpanel.php'>Click to return to the control panel.</a></p>";
