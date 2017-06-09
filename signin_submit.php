@@ -2,9 +2,10 @@
 	include("database_conn.php");
 	
 	$user = $_POST["user"];
-	$pass = $_POST["pass"];
+	$plain_pass = $_POST["pass"];
+	$encrypt_pass = hash("md5", $plain_pass);
 	
-	$query = "SELECT * FROM users WHERE username = '$user' AND password = '$pass';";
+	$query = "SELECT * FROM users WHERE username = '$user' AND password = '$encrypt_pass';";
 	$result = mysqli_query($con, $query); // $con is created in database_conn.php
 	$rows = mysqli_num_rows($result);
 	
