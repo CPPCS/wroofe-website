@@ -13,7 +13,7 @@
 			
 			try
 			{
-				$query = "INSERT INTO users VALUES('$user', '$pass');";
+				$query = "INSERT INTO users VALUES(null, '$user', '$pass');";
 				mysqli_query($con, $query);
 				
 				echo "<p>User added successfully. <a href='controlpanel.php'>Click to return to the control panel.</a></p>";
