@@ -12,7 +12,10 @@
 			<p>Select an option below:</p>
 			<ul>
 				<li><a href="addpost_form.php">Add Post</a></li>
+				<li><a href="deletepost_form.php">Delete Post</a></li>
+				<br />
 				<li><a href="adduser_form.php">Add User</a></li>
+				<li><a href="deleteuser_form.php">Delete User</a></li>
 			</ul>
 		</div>
 	</body>
